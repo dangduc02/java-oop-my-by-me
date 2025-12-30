@@ -1,0 +1,19 @@
+with open("infoSV.py", "w") as f:
+    f.write('''
+_name = ""
+_mssv = ""
+def ten():
+    global _name
+    _name = input("Tên: ")
+    print("Tên:", _name)
+def mssv():
+    global _mssv
+    _mssv = input("MSSV: ")
+    print("MSSV:", _mssv)
+''')
+
+import importlib, infoSV
+importlib.reload(infoSV)
+
+infoSV.ten()
+infoSV.mssv()
